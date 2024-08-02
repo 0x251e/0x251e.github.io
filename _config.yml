@@ -1,3 +1,4 @@
+@@ -1,58 +1,5 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -55,4 +56,4 @@ plugins:
 #   - vendor/ruby/
 remote_theme: b2a3e8/jekyll-theme-console
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme # add this line to the plugins list if you already have one:
