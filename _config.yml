@@ -6,7 +6,7 @@ url: "https://0x251e.github.io"
 header_pages:
   - index.md
   - peter.md
-  - about.md
+  - learning.md
   - contact.md
 
 style: dark
