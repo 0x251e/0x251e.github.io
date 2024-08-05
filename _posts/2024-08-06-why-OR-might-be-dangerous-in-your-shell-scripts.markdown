@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why || Might Be Dangerous in Your Shell Scripts"
+title:  "Why OR Might Be Dangerous in Your Shell Scripts"
 date:   2024-08-06
 categories: linux
 ---
