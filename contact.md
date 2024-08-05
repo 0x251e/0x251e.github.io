@@ -1,7 +1,7 @@
 ---
 title: ./whoami
 layout: page
-permalink: /contact
+permalink: /whoami
 ---
 
 <p align="center">
