@@ -1,6 +1,6 @@
 ---
 title:  "Why OR Might Be Dangerous in Your Shell Scripts"
-date:   2024-08-06
+date:   2024-08-05
 categories: linux
 ---
 
