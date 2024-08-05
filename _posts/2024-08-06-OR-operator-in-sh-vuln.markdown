@@ -1,7 +1,6 @@
 --- 
-layout:post
-title:"Why || Might Be Dangerous in Your Shell Scripts"
-category:"linux"
+title:  "Why || Might Be Dangerous in Your Shell Scripts"
+category:   linux
 date:2024-08-06
 ---
 
