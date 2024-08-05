@@ -2,7 +2,7 @@
 layout: post
 title:  "Wireshark For Geolocating IP Address"
 date:   2018-11-04 12:32:45 +0100
-categories: learning
+categories:
 ---
 
 
