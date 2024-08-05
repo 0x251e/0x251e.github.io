@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Learning Resources
+title: ./category
 ---
 
 <h1>{{ page.title }}</h1>

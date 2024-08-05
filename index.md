@@ -1,5 +1,5 @@
 ---
-title: /root
+title: ./blog
 layout: home
 permalink: /
 ---
