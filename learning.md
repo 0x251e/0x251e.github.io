@@ -4,14 +4,6 @@ title: ./category
 permalink: /category/
 ---
 
-## Table of Contents
-
-{% for category in site.categories %}
-  <a href="#{{ category[0] | slugify }}">{{ category[0] }}</a>{% unless forloop.last %} • {% endunless %}
-{% endfor %}
-
----
-
 {% for category in site.categories %}
   <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
   <ul>
