@@ -1,18 +1,19 @@
 ---
-layout: default
+layout: page
 title: ./category
+permalink: /category/
 ---
 
-<h1>{{ page.title }}</h1>
-
-<ul>
-  {% for post in site.posts %}
-    {% if post.categories contains "learning" %}
+{% for category in site.categories %}
+  <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+  <ul>
+    {% for post in category[1] %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+        <small>{{ post.date | date_to_string }}</small>
       </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
+    {% endfor %}
+  </ul>
+{% endfor %}
