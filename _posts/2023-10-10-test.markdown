@@ -4,5 +4,4 @@ date: 2023-10-10
 categories: malware
 ---
 
-<img src="/assets/images/smiley.png" alt="Description" style="width: 10px; height: auto;"/>
-
+![My Image](/assets/images/smiley.png){:height="80px" width="50px"}
