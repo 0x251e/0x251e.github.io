@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "test"
 date: 2024-02-03
 categories: malware
