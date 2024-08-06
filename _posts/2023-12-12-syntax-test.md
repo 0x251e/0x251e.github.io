@@ -22,6 +22,8 @@ This post is a test of syntax highlighting and table rendering in Markdown.
   <p>This is a test HTML file.</p>
 </body>
 </html>
+```
+![Description of the image](image.jpg)
 
 
 ### Key Elements in the Markdown File
