@@ -1,8 +1,9 @@
 ---
+layout: page
 title: "test"
 date: 2024-02-03
 categories: malware
 ---
 
-![Description of image](assets/images/smiley.png)
+<img src="assets/images/smiley.png" alt="Description of image">
 
