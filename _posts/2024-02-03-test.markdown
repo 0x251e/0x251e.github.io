@@ -4,6 +4,4 @@ date: 2024-02-03
 categories: malware
 ---
 
-<p align="center">
-  <img src="../images/see.png" alt="Profile Image" width="150"/>
-</p>
+![Description of image](smiley.png)
