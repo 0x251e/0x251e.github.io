@@ -1,2 +1,0 @@
-<img src="/assets/images/your-image.jpg" alt="Description" style="width: 150px; height: auto;"/>
-
