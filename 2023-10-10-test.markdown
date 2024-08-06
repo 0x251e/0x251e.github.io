@@ -1,4 +1,2 @@
-<p align="center">
-    <img src="/assets/images/your-image.jpg" alt="" width="50"/>
-</p>
+<img src="/assets/images/your-image.jpg" alt="Description" style="width: 150px; height: auto;"/>
 
