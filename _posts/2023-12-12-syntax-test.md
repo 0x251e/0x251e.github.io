@@ -23,7 +23,7 @@ This post is a test of syntax highlighting and table rendering in Markdown.
 </body>
 </html>
 ```
-![Description of the image](image.jpg)
+![Description of the image](image.JPG)
 
 
 <p align="center">
