@@ -3,8 +3,7 @@ layout: post
 title: "test"
 date: 2024-02-03
 categories: malware
-permalink: /2024-02-03-test.markdown
 ---
 
-<img src="assets/images/smiley.png" alt="Description of image">
+<img src="https://github.com/0x251e/0x251e.github.io/blob/gh-pages/assets/images/smiley.png" alt="Description of image">
 
