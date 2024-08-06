@@ -26,6 +26,10 @@ This post is a test of syntax highlighting and table rendering in Markdown.
 ![Description of the image](image.jpg)
 
 
+<p align="center">
+  <img src="image.jpg" alt="Profile Image" width="150"/>
+</p>
+
 ### Key Elements in the Markdown File
 
 1. **Front Matter**:
