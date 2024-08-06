@@ -4,4 +4,4 @@ date: 2024-02-03
 categories: malware
 ---
 
-![Description of image](smiley.png)
+![Description of image](assets/images/smiley.png)
