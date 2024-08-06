@@ -181,3 +181,7 @@ This **does __not__ work either**.
 </p>
 
 
+
+Here comes a ![smiley](../images/smiley.png)! And here
+![too](../images/other.png 'Title text'). Or ![here].
+With empty alt text ![](../images/see.jpg)
