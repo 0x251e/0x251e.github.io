@@ -4,4 +4,4 @@ date: 2023-10-10
 categories: malware
 ---
 
-![My Image](/assets/images/smiley.png){:height="80px" width="50px"}
+![My Image](/assets/images/smiley.png){:height="1px" width="1px"}
