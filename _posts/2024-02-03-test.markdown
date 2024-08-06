@@ -3,6 +3,7 @@ layout: post
 title: "test"
 date: 2024-02-03
 categories: malware
+permalink: /test/
 ---
 
 <img src="assets/images/smiley.png" alt="Description of image">
