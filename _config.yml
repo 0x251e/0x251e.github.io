@@ -1,10 +1,10 @@
-title: Jekyll Serial Programmer
+title: '0x251e.github.io'
 markdown: kramdown
 
 # for atom feed
 author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+  name: 0x251e
+  email: shreethaara380@gmail.com
 
 plugins:
   - jemoji
