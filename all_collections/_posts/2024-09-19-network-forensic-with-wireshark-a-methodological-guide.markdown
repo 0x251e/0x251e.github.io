@@ -6,7 +6,7 @@ categories: forensic
 
 # Network Forensics with Wireshark: A Methodological Guide
 
-![wireshark](/images/2024-09-19/wireshark.png){:height="59px" width="213.5px"}
+![wireshark](/images/2024-09-19/wireshark.png)
 
 Wireshark is a useful tool in network forensic as it allows digital forensic experts to capture and analyze network traffic transmitted through the network. With the ability to dissect hundreds of network protocols and view packet-level details, Wireshark is an instrument to detect suspicious activities, diagnosing network issue and perform comprehensive network forensic investigations. This blog is about the methodology of utilizing Wireshark effectively to perform detailed network forensic analysis. 
 
@@ -24,7 +24,7 @@ With this guide, we will be using this [pcap (rogue-user.pcap)](https://github.c
 
 This would be our first step to have a surface level of understading of the packet capture. We can use the Capture File Properties under Statistics tab and it will show crucial information such as encapsulation, time captured, number of packets and bytes etc. Let's get start and analyze it. 
 
-![capture-properties](/images/2024-09-19/capture-properties.png){:height="543.75px" width="672.75px"}
+![capture-properties](/images/2024-09-19/capture-properties.png)
 
 From here, we able to derive a couple information:
 - Total time captured: 4 minutes 39 seconds
@@ -37,13 +37,13 @@ Based on this information, we can acknowledge that the Ethernet encapsulation an
 
 Next step is to view a hierarchical structure of the whole packet capture and relative endpoints conversations. First we will be viewing the protocol hierarchy, by accessing Protocol Hierarchy under Statistic tab.
 
-<img src="/images/2024-09-19/protocol-hierarchy.png" alt="protocol-hierarchy" style="width: 50%;">
+<img src="/images/2024-09-19/protocol-hierarchy.png" alt="protocol-hierarchy">
 
 With protocol hierarchy, we able to narrow down our objective, which is to find out the rogue user with the network. We notice a section of "Data" packets encapsulated in TCP along with some malformed packet. We can pay more attention on this detail first and gather more information on the endpoint conversation.
 
 Endpoint conversation basically summarize which IP address 'talks' to whom and how much they are 'talking'. Is it one 'talks' way too much than another. Again, head to Analytics tab and choose Conversations (Endpoints will do as well, but it doesnt show the conversation between two endpoints). 
 
-<img src="/images/2024-09-19/conversations.png" alt="conversations" style="width: 50%;">
+<img src="/images/2024-09-19/conversations.png" alt="conversations">
 
 From here, we will understand the traffic flow between each endpoints based on IP address. 
 
@@ -87,7 +87,7 @@ With these information, we can prepare display filters as such
 
 This display filters will shows the packets that contain raw data in TCP stack and which originating from 192.168.56.101
 
-<img src="/images/2024-09-19/display-filters.png" alt="display-filters" style="width: 50%;">
+<img src="/images/2024-09-19/display-filters.png" alt="display-filters">
 
 We have successfully narrow down to 16 packets from 130 packets. Moreover, we notice from source port of 5555 which suggest the default port for service name. Based on our hypothesis, we have confirm our findings. 
 
