@@ -5,14 +5,14 @@ date: 2024-10-09
 categories: ["wireshark","forensic"]
 ---
 
-### Introduction
+### Introduction:
 
 HTTPS has become the standard for secure communication on the web, encrypting data to protect it from prying eyes. While this encryption is crucial for privacy, there are legitimate reasons to analyze HTTPS traffic, such as diagnosing network issues, identifying potential security threats, or learning about how SSL/TLS encryption works. In this guide, we'll explore how to decrypt HTTPS traffic using Wireshark, one of the most powerful network analysis tools available. We'll break down the steps to access and analyze encrypted data, so you can gain valuable insights while maintaining ethical standards in your analysis. 
 
 With this guide, we will using this pcap ( ) from AlexisAhmed. There is also Youtube vide walkthrough
 
 
-### Understanding SSL/TLS Encryption
+### Understanding SSL/TLS Encryption:
 
 Data transferred over the internet or a computer network is protected by SSL (Secure Sockets Layer) encryption, as well as its more contemporary and secure counterpart, TLS (Transport Layer Security). This prohibits attackers (and Internet Service Providers) from accessing or manipulating with data sent between two nodes, generally a user's web browser and a web/app server. SSL/TLS employs both asymmetric and symmetric encryption to ensure the confidentiality and integrity of data in transit. Asymmetric encryption is used to create a secure session between a client and a server, whereas symmetric encryption is used to exchange data inside that session. 
 
@@ -33,3 +33,24 @@ The image above shown is a process of TLS/SSL handshake, it takes place whenever
 - ClientKeyExchange, ChangeCipherSpec, Finished: The client generates a pre-master secret, encrypts it with the server's public key, and sends it to the server. 
 - ChangeCipherSec and Finished: The client and server exchange messages to confirm they are switching to the new encryption settings, completing the handshake.
 
+### PCAP Analyzing and TLS/SSL Decrypting Session:
+
+The given PCAP is about a system on a network was infected by a Dridex malware. This malware targets financial institution and the infection method is through spreasheets with attached macros.
+
+For information of Dridex malware: [redcanary.com](https://redcanary.com/threat-detection-report/threats/dridex/)
+
+###### Protocol Hierarchy:
+
+![protocol-hierarchy]()
+
+We able to notice HTTP packets with TLS encapsulatation. So we will have decrypt it wil the provided SSL keys. 
+
+Here are the steps to decrypt it:
+
+
+
+
+
+### References:
+
+https://my.f5.com/manage/s/article/K50557518
