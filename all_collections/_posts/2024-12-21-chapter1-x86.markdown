@@ -4,7 +4,6 @@ title: "Chapter 1: x86"
 date: 2024-12-21
 categories: [reverse engineering, x86]
 ---
-
 ### Overview
 The x86 architecture is based off Intel 8086 processor which focus on 32-bit implementation, also known as (IA-32).
 
@@ -108,7 +107,7 @@ mov   esi, ecx      ; set ESI = ECX
 
 move data to/from memory, it use square brackets `[]` to indicate memory access. 
 **NOTE**: LEA instruction which also use `[]` but does not actually reference memory
-```
+```nasm
 mov    dword ptr [eax], 1  ; set memory address EAX at 1
 mov    ecx, [eax]          ; set ECX to the value at address EAX
 mov    [eax], ebx          ; set the memory at address EAX to EBX
