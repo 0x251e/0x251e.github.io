@@ -44,16 +44,16 @@ In x86 architecture, there are 8 32-bit general purpose registers.
 ![Pasted image 20241208163836.png](/images/2024-12-21/Pasted-image-20241208163836.png)
 From the image, we can notice EAX, EBX, ECX and EDX can be divided into 8- and 16 bits registers. 
 
-| Register | Purpose                                                                                      |
-| -------- | -------------------------------------------------------------------------------------------- |
-| EAX      | Used for arithmetic operations and as a general-purpose data register                        |
-| EBX      | Used as a pointer to data in memory, often in indexing operations                            |
-| ECX      | Used as a loop counter in iterations and for shifts/rotations in bit-level operations        |
-| EDX      | Used for I/O operations, multiplication/division, and holding extra data during computations |
-| ESI      | Source in string/memory operations, pointing to data being read                              |
-| EDI      | Destination in string/memory operations, pointing to where data is written                   |
-| ESP      | Stack pointer, pointing to the top of the stack                                              |
-| EBP      | Base frame pointer, pointing to the base of the current stack frame                          |
+| Register  | Purpose                                                                                       |
+| :-------- | :-------------------------------------------------------------------------------------------- |
+| EAX       | Used for arithmetic operations and as a general-purpose data register                         |
+| EBX       | Used as a pointer to data in memory, often in indexing operations                             |
+| ECX       | Used as a loop counter in iterations and for shifts/rotations in bit-level operations         |
+| EDX       | Used for I/O operations, multiplication/division, and holding extra data during computations  |
+| ESI       | Source in string/memory operations, pointing to data being read                               |
+| EDI       | Destination in string/memory operations, pointing to where data is written                    |
+| ESP       | Stack pointer, pointing to the top of the stack                                               |
+| EBP       | Base frame pointer, pointing to the base of the current stack frame                           |
 
 Common data types:
 - Byte: 8 bits, stores single byte of data (0 to 255)
@@ -65,14 +65,14 @@ Common data types:
 
 Moreover, there are registers which is used for managing low-level system mechanisms and execution states. Those registers are:
 
-| Register | Purposes                                                                                          |
-| -------- | ------------------------------------------------------------------------------------------------- |
-| EFLAGS   | Stores status of arithmetic operations and execution states. It is used for conditional branching |
-| CR0      | Control system-level mechanism like enabling/disabling paging                                     |
-| CR2      | Contains linear address that caused a page fault                                                  |
-| CR3      | Holds the base address of the paging data structure                                               |
-| CR4      | Controls hardware virtualization settings                                                         |
-| DR0-DR7  | Used to set memory breakpoints for debugging                                                      |
+| Register  | Purposes                                                                                           |
+| :-------- | :------------------------------------------------------------------------------------------------- |
+| EFLAGS   | Stores status of arithmetic operations and execution states. It is used for conditional branching   |
+| CR0      | Control system-level mechanism like enabling/disabling paging                                       |
+| CR2      | Contains linear address that caused a page fault                                                    |
+| CR3      | Holds the base address of the paging data structure                                                 |
+| CR4      | Controls hardware virtualization settings                                                           |
+| DR0-DR7  | Used to set memory breakpoints for debugging                                                        |
 
 ### Instruction Set
 For the sake of my slow learning progress, I am going to learn x86 instruction set first, not going to cover ARM, later on will do that. Also sticking to Intel syntax. 
@@ -86,15 +86,15 @@ Now lets dive into x86 instruction set, it give direction for data movement betw
 
 If we refer to Intel's 64 and IA-32 documentation, Chapter 5 (Instruction Set Summary) under 5.1 General-Purpose Instructions. Instructions can be divided into:
 
-| Instructions                    | Functions                                                                                                                                                                   |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data transfer instructions      | Move data between memory and the general-purpose and segment registers. Perform specific operations: conditional moves, stack access and data conversion                    |
-| Binary Arithmetic Instructions  | Performs basic binary integer computations on byte, word and doubleword integers located in memory and/or the general purpose integers.                                     |
-| Decimal Arithmetic Instructions | Performs decimal arithmetic on binary coded decimal (BCD) data                                                                                                              |
-| Logical Instructions            | Performs basic AND, XOR, and NOT logical operations on byte, word and doubleword values.                                                                                    |
-| Shift and Rotate Instructions   | Shift and rotate the bits in words and doubleword operands                                                                                                                  |
-| Bit and Byte Instructions       | Test and modify individual bits in words and doubleword operands. Byte instructions set the value of a byte operand to indicate the status of flags in the EFLAGS registers |
-| Control Transfer Instructions   | Provide jump, conditional jump, loop and call and return operations to control program flow                                                                                 |
+| Instructions                     | Functions                                                                                                                                                                    |
+| :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Data transfer instructions       | Move data between memory and the general-purpose and segment registers. Perform specific operations: conditional moves, stack access and data conversion                     |
+| Binary Arithmetic Instructions   | Performs basic binary integer computations on byte, word and doubleword integers located in memory and/or the general purpose integers.                                      |
+| Decimal Arithmetic Instructions  | Performs decimal arithmetic on binary coded decimal (BCD) data                                                                                                               |
+| Logical Instructions             | Performs basic AND, XOR, and NOT logical operations on byte, word and doubleword values.                                                                                     |
+| Shift and Rotate Instructions    | Shift and rotate the bits in words and doubleword operands                                                                                                                   |
+| Bit and Byte Instructions        | Test and modify individual bits in words and doubleword operands. Byte instructions set the value of a byte operand to indicate the status of flags in the EFLAGS registers  |
+| Control Transfer Instructions    | Provide jump, conditional jump, loop and call and return operations to control program flow                                                                                  |
 And many other more, I will try to cover the rest with some examples in some other time.
 
 ### Data Movement
@@ -136,7 +136,7 @@ This instruction move data with 1-,2-, or 4-byte granularity between two memory 
 ### Arithmetic Operations
 The assembly instructions set has basic arithmetic operation (addition, subtraction, multiplication and division) and bit-level operations (AND, OR, XOR, NOT, shifts). Most are straightforward, except multiplication and division, which may require additional handling. Here is the example:
 
-```
+```nasm
 add esp, 14h                        ; esp = esp + 0x14h
 sub ecx, eax                        ; ecx = ecx - eax
 sub esp, 0Ch                        ; esp = esp - 0xc
