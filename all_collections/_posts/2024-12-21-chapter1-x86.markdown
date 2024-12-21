@@ -123,7 +123,8 @@ mov    edx, [ecx+eax]      ; set EDX to the value at address (ECX + EAX)
 ```
 
 Based on the assembly code above, we can translate that into pseudo C programming language with the concept of pointers.
-```
+```nasm
+
 *eax = 1;
 ecx = *eax;
 *eax = ebx;
@@ -131,7 +132,6 @@ ecx = *eax;
 eax = *(esi+34);
 edx = *(ecx+eax);
 ```
-
 
 **MOVSB/MOVSW/MOVSD**
 This instruction move data with 1-,2-, or 4-byte granularity between two memory address. It implicitly use EDI/ESI as the destination/source address respectively. This instruction used to implement string or memory copy functions when the length is known at compile time. Moreover, it automatically update the source/destination address depending on the direction flag (DF) flag in EFLAGS. To put it simply:
@@ -153,6 +153,7 @@ int main() {
 Now here is the translation to assembly:
 
 ```nasm
+
 mov esi, src    ; load source address to ESI register
 mov edi, dest   ; laod destination address into EDI
 mov ecx, 8      ; set the count of bytes to copy
@@ -165,6 +166,7 @@ To note, the `REP` is used to automated the loop in order to reduce the overhead
 The assembly instructions set has basic arithmetic operation (addition, subtraction, multiplication and division) and bit-level operations (AND, OR, XOR, NOT, shifts). Most are straightforward, except multiplication and division, which may require additional handling. Here is the example:
 
 ```nasm
+
 add esp, 14h                        ; esp = esp + 0x14h
 sub ecx, eax                        ; ecx = ecx - eax
 sub esp, 0Ch                        ; esp = esp - 0xc
@@ -290,6 +292,7 @@ if (value == 0) {
 
 Here it checks whether `value` is 0, so in assembly it translates to this:
 ```nasm
+
 test eax, eax             ; check condition
 jz location               ; jump if zero (condition met)
 ; Code block if condition false
@@ -376,6 +379,7 @@ for (int i=0; i < count; i++) {
 ```
 Translates to assembly:
 ```nasm
+
     mov     ecx, count       ; Load count into ecx
     xor     eax, eax         ; Initialize i (eax) to 0
 
