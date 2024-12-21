@@ -4,6 +4,9 @@ title: "Chapter 1: x86"
 date: 2024-12-21
 categories: [reverse engineering, x86]
 ---
+
+Here is my blog-style documentation of my reverse enginnering progress. The book I am referring to is from Bruce Dang titled "Practical Reverse Engineering". I will share my progress and insights as I explore the concepts and techniques in the books. 
+
 ### Overview
 The x86 architecture is based off Intel 8086 processor which focus on 32-bit implementation, also known as (IA-32).
 
