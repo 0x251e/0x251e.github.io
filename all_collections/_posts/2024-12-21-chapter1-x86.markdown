@@ -129,9 +129,32 @@ edx = *(ecx+eax);
 
 
 **MOVSB/MOVSW/MOVSD**
-This instruction move data with 1-,2-, or 4-byte granularity between two memory address. It implicitly use EDI/ESI as the destination/source address respectively. This instruction used to implement string or memory copy functions when the length is known at compile time. 
+This instruction move data with 1-,2-, or 4-byte granularity between two memory address. It implicitly use EDI/ESI as the destination/source address respectively. This instruction used to implement string or memory copy functions when the length is known at compile time. Moreover, it automatically update the source/destination address depending on the direction flag (DF) flag in EFLAGS. To put it simply:
+- `ESI:` Points to the source buffer (`src` in C)
+- `EDI:` Points to the destination buffer (`dest` in C)
+- `ECX:` Holds the length of the memory to copy (number of iteration)
+- `EFLAFS (DF)`: Determine whether the copy move forward (`DF=01`) or backward (`DF=1`)
 
-// require memcpy knowledge in c
+Consider this example of `memcpy` in C:
+
+```c
+int main() {
+    char src[10] = "ABCDEF";
+    char dest[10];
+    memcpy(dest,src,8); //copy 8 bytes from src to dest
+    return 0;
+```
+
+Now here is the translation to assembly:
+
+```nasm
+mov esi, src    ; load source address to ESI register
+mov edi, dest   ; laod destination address into EDI
+mov ecx, 8      ; set the count of bytes to copy
+rep movsb       ; repeat MOVSB (byte-by-byte copy) for ECX times 
+```
+
+To note, the `REP` is used to automated the loop in order to reduce the overhead process of manually iterating over memory locations. (PS: I didnt cover `SCAS`,`STOS` and `LODS` instructions, will do it as a separate section)
 
 ### Arithmetic Operations
 The assembly instructions set has basic arithmetic operation (addition, subtraction, multiplication and division) and bit-level operations (AND, OR, XOR, NOT, shifts). Most are straightforward, except multiplication and division, which may require additional handling. Here is the example:
@@ -410,5 +433,4 @@ OS commonly implements system calls through interrupts and exception mechanism.
 4. [Intel 64 and IA-32 Architecture Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
 5. [Github Gist on memcpy](https://gist.github.com/Const-me/3290266d2a5f51409eb813d39b28007c)
 6. [Stack Operations and Function Calls in x86](https://textbook.cs161.org/memory-safety/x86.html#26-stack-pushing-and-popping)
-
-
+7. [Reverse Engineering for Noobs Part 1](https://x86re.com/1.html)
