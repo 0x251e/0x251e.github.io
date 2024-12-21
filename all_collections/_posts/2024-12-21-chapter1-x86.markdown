@@ -105,6 +105,7 @@ And many other more, I will try to cover the rest with some examples in some oth
 **MOV**
 move a register or immediate to register
 ```nasm
+
 mov   esi, 0F003Fh  ; set ESI = 0xF003
 mov   esi, ecx      ; set ESI = ECX
 ```
@@ -112,6 +113,7 @@ mov   esi, ecx      ; set ESI = ECX
 move data to/from memory, it use square brackets `[]` to indicate memory access. 
 **NOTE**: LEA instruction which also use `[]` but does not actually reference memory
 ```nasm
+
 mov    dword ptr [eax], 1  ; set memory address EAX at 1
 mov    ecx, [eax]          ; set ECX to the value at address EAX
 mov    [eax], ebx          ; set the memory at address EAX to EBX
