@@ -17,22 +17,22 @@ In the context of cybersecurity, a shellcode refers to a small piece of code tha
 ### Types of Shellcode
 Shellcodes can be categorized into two main types: **local** and **remote**, depending on whether the attack has direct access to the targeted system or being used to exploit over a network 
 
-5. Local Shellcode - It is used when an attacker has restricted access to a machine but can still exploit a vulnerability. A common example is a buffer overflow attack, where successful exploitation allows the attack to escalate privileges and gain full control over the system
+5. **Local Shellcode** - It is used when an attacker has restricted access to a machine but can still exploit a vulnerability. A common example is a buffer overflow attack, where successful exploitation allows the attack to escalate privileges and gain full control over the system
 
-6. Remote Shellcode - It involves attacking a device over a network and uses TCP/IP socket to establish control over the target machine. If the shellcode connects back to the attack's device, it is called a reverse shell. It the attack connects to a port bound by the shellcode, it is referred to as bind shell. 
+6. **Remote Shellcode** - It involves attacking a device over a network and uses TCP/IP socket to establish control over the target machine. If the shellcode connects back to the attack's device, it is called a reverse shell. It the attack connects to a port bound by the shellcode, it is referred to as bind shell. 
 
-7. Download and Execute Shellcode - Instead of opening a shell, this type of downloads malware onto the target system and executes it. It is often used in drive-by download attacks, where the payload is retrieved, saved and launched automatically
+7. **Download and Execute Shellcode** - Instead of opening a shell, this type of downloads malware onto the target system and executes it. It is often used in drive-by download attacks, where the payload is retrieved, saved and launched automatically
 
-8. Staged Shellcode - When payload size is limited, attackers use a staged approach. A small **Stage 1** shellcode is injected and executed, which then loads a larger **Stage 2** payload for full execution.
+8. **Staged Shellcode** - When payload size is limited, attackers use a staged approach. A small **Stage 1** shellcode is injected and executed, which then loads a larger **Stage 2** payload for full execution.
 
-9. Egg-Hunt Shellcode - This is similar to the staged shellcode, it uses a small egg-hunt routine to scan the process's memory space for the actual payload (the egg) and execute it once found
+9. **Egg-Hunt Shellcode** - This is similar to the staged shellcode, it uses a small egg-hunt routine to scan the process's memory space for the actual payload (the egg) and execute it once found
 
-10. Omelette Shellcode - A variant of egg-hunt shellcode, where multiple small data blocks (eggs) are injected separately, then combined into a larger omelette before execution. This is useful when only small data chunks can be injected at a time.
+10. **Omelette Shellcode** - A variant of egg-hunt shellcode, where multiple small data blocks (eggs) are injected separately, then combined into a larger omelette before execution. This is useful when only small data chunks can be injected at a time.
 
 ### Use Cases of Shellcode 
 Shellcode is a crucial part of many exploit or red teaming scenarios where it serves as the exact payload that connects the execution of arbitrary code on a target system to the exploitation of a vulnerability. 
 
-Based on the MITRE ATT&CK technique of [T1055](https://attack.mitre.org/techniques/T1055/), shellcode is used as process injection where malware injects shellcode into legitimate processes to evade detection from AV/EDR. We can take Cobalt Strike as a practical example, which use subtechnique of (DLL injection)[https://attack.mitre.org/techniques/T1055/001/] to execute shellcode directly in the memory. 
+Based on the MITRE ATT&CK technique of [T1055](https://attack.mitre.org/techniques/T1055/), shellcode is used as process injection where malware injects shellcode into legitimate processes to evade detection from AV/EDR. We can take Cobalt Strike as a practical example, which use subtechnique of [DLL injection](https://attack.mitre.org/techniques/T1055/001/) to execute shellcode directly in the memory. 
 
 ### Differences between Shellcode and Traditional Binaries
 Traditional binaries and shellcode represent its own fundamental approaches to be executed and having its own behavior and constraints. Traditional binaries are structured files that conform to specific formats (like ELF or PE) which containing headers, sections and relocation information that help the operating system loader place and execute them properly. It relies heavily on the OS's loader to resolve any dependencies, establishing memory layouts and handling runtime requirements. 
