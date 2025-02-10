@@ -39,14 +39,15 @@ Traditional binaries and shellcode represent its own fundamental approaches to b
 
 In contrast, shellcode operates as a raw machine code that execute independently. Shellcode's main objective is to execute very specific action, which usually within the limited and hostile confines of a target process's memory space. Refer the table below as a comparison between shellcode and traditional binaries malware.
 
-| Charateristics        | Traditional Binary                                                                                   | Shellcode                                                                                 |
-|:--------------------- |:---------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------- |
-| Size & Structure      | Larger footprint with additional libraries and functionalities with a defined structure with section | Compacted size to evade detection with raw machine instruction without any formal headers |
-| Execution Environment | Can be executed as self-contained programs under OS control                                          | Used by injecting into pre-existing process memory                                        |
-| Function Calls        | Uses PLT/GOT for external function resolution                                                        | Must manually resolve function addresses or contain all needed code                       |
-| Initialization        | Has standard entry point (\_start)                                                                   | Must initialize its own execution environment                                             |
-| Stack Usage           | Normal stack frames with standard conventions                                                        | Avoid stack operations or uses custom frames                                              |
-| System Calls          | Use C Library wrappers (glibc or Windows APIs)                                                       | Often make direct system calls                                                            |
+| Charateristics         | Traditional Binary                                                                                    | Shellcode                                                                                  |
+| :--------------------- | :---------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| Size & Structure       | Larger footprint with additional libraries and functionalities with a defined structure with section  | Compacted size to evade detection with raw machine instruction without any formal headers  |
+| Execution Environment  | Can be executed as self-contained programs under OS control                                           | Used by injecting into pre-existing process memory                                         |
+| Function Calls         | Uses PLT/GOT for external function resolution                                                         | Must manually resolve function addresses or contain all needed code                        |
+| Initialization         | Has standard entry point (\_start)                                                                    | Must initialize its own execution environment                                              |
+| Stack Usage            | Normal stack frames with standard conventions                                                         | Avoid stack operations or uses custom frames                                               |
+| System Calls           | Use C Library wrappers (glibc or Windows APIs)                                                        | Often make direct system calls                                                             |
+
 Shellcode must operate under severe constraints, with the consideration of the target environment, execution context, and potential security mechanism. This is the fundamental reason of why shellcode development requires specialized knowledge and technique compared to developing traditional executable malware.
 
 Next topic will be "Understanding Assembly for Shellcode Development" which emphasizing basic x86/64 assembly instruction with its calling conventions. Since we have to speak low level, knowledge of registers and stack management will be discuss in depth. 
