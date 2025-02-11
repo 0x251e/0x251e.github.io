@@ -334,6 +334,7 @@ Finally, the stack cleanup process:
 - `mov esp, ebp` -> restores stack pointer
 - `pop ebp` -> restores caller's base pointer
 - `ret` -> pops return address into `EIP` and jumps back to `_start`
+
 ```
 
               ┌──────────────┐
