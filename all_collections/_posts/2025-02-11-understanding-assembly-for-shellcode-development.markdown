@@ -68,7 +68,7 @@ Before writing assembly code, understanding the core structure and how its work 
 
 Here is a boilerplate assembly code which use NASM sytnax with x86 architecture instruction
 
-```asm
+```nasm
 
 section .data                ; section declaration
 msg   db    "Hello, World!"  ; holds string
@@ -98,6 +98,7 @@ Refer to [x86-32bit Linux Syscall Table](https://chromium.googlesource.com/chrom
 In the code, `global _start` line is use to link the code to be compile into ELF binary. It is for exporting symbols to where it will points in the object code generated. The linker will then read that symbol in the object code and its value to marks an entry point in the ELF. Here is how to compile, link and executable our helloworld.asm
 
 ```sh
+
 $ nasm -f elf hello.asm
 $ ld -m elf_i386 hello.o -o hello
 $ ./a.out
@@ -112,6 +113,7 @@ Lets take an example of syscall **gettimeofday**, we will explore both x86 and x
 
 Starting higher level language, which is C, here is how to implement `gettimeofday` syscall
 ```c 
+
 #include <time.h>
 #include <sys/time.h>
 #include <stdio.h>
@@ -128,6 +130,7 @@ int main(int argc, char **argv) {
 From the C code, `gettimeofday` function takes in two parameters. The first parameter is a pointer to the time `timeval` structure which represents an elapsed time:
 
 ```c
+
 struct timeval {
 	time_t tv_sec;           // seconds
 	suseconds_t tv_usec;     // microseconds
@@ -158,7 +161,8 @@ In assembly x86_64:
 Here is a short assembly implementation of `gettimeofday` to show how values and arguments are passed into registers
 
 For x86 (32-bit) Assembly:
-```asm
+```nasm
+
 section .bss
     tv resb 8    ; Reserve 8 bytes for struct timeval
 
@@ -178,7 +182,8 @@ _start:
 ```
 
 and for x86_64 (64-bit assembly)
-```asm
+```nasm
+
 section .bss
     tv resb 8    ; Reserve 8 bytes for struct timeval
 
@@ -202,7 +207,8 @@ The stack is a Last-In, First-Out (LIFO) data structure used for storing functio
 
 Lets take an example where the programs take in two arguments of integers and pass it two a function to perform a sum calculation. 
 
-```asm
+```nasm
+
 section .text
 global _start
 
@@ -236,6 +242,7 @@ Here how the code execution flow and stack management:
 
 Initial Stack State (growing downward):
 ```
+
 High Address  ┌──────────────┐
               │ Environment  │
               │   Variables  │
@@ -276,7 +283,9 @@ After pushing parameters:
 	- Restore base pointer -> `pop ebp`
 	- Return to caller -> `ret` (Pop return address into EIP)
 Inside `sum` function, it has the prologue of `push ebp` and `mov ebp, esp` to set up a new stack frame.
+
 ```
+
               ┌──────────────┐
               │ Environment  │
               ├──────────────┤
@@ -294,10 +303,13 @@ Inside `sum` function, it has the prologue of `push ebp` and `mov ebp, esp` to s
               └──────────────┘
 
 ```
+
 Here it will access the parameter by loading into eax where 10 move into EAX and then adds with 20. Now EAX is 30
 
 After entering sum function (after push ebp):
+
 ```
+
               ┌──────────────┐
               │ Environment  │
               ├──────────────┤
@@ -323,6 +335,7 @@ Finally, the stack cleanup process:
 - `pop ebp` -> restores caller's base pointer
 - `ret` -> pops return address into `EIP` and jumps back to `_start`
 ```
+
               ┌──────────────┐
               │ Environment  │
               ├──────────────┤
