@@ -649,6 +649,7 @@ struct collection_type {
 
 ```
 - collection.c (source file which implements the logic)
+
 ```c
 #include "collection.h"
 #include "collection_internal.h"
