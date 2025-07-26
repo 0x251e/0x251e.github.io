@@ -2,7 +2,7 @@
 layout: post
 title: How I Nuked My Arch Over One Missing Firmware
 date: 2025-07-26
-categories: [Linux]
+categories: [linux]
 ---
 
 ![nuke-arch-1](/images/2025-07-26/nuke-arch-1.png)
