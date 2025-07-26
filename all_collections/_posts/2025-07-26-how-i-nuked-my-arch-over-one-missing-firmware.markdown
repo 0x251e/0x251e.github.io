@@ -5,13 +5,13 @@ date: 2025-07-26
 categories: [Linux]
 ---
 
-![[Pasted image 20250727014213.png]]
+![nuke-arch-1](/images/2025-07-26/nuke-arch-1.png)
 
 ### The Story
 Welp, it begins after I send my laptop (the right one in the image) to change its RAM since it gave up itself and considered upgrading it from 16GB to 32GB. After done servicing it, I rolled up my sleeves and begin the installation process. As I did install arch more than 4 times and so confidently install it without referring to [documentation](https://wiki.archlinux.org/title/Installation_guide). Yeah, the overconfidence just took over at that moment. Everything goes smooth as butter with [ml4w dotfiles](https://github.com/mylinuxforwork/dotfiles). 
 
 Soon after, I opened Youtube and notice there is no audio. Hmmm.... I wonder why ???
-Well, did I everything ???
+Well, did I done everything right ???
 Checklist:
 - `pipewire`? Installed 
 - `wireplumber ?` Yes is there
@@ -21,12 +21,13 @@ Run again with root privileges, classic way to troubleshoot Linux
 
 Now headache begins, read documentation again (should have done this earlier), checking the config for audio, went to [reddit](https://www.reddit.com/r/archlinux/comments/pleb6c/audio_not_working_arch_linux/) and notice user **JkaSalt** recommended install `sof-firmware` and reboot it. 
 
-![[Pasted image 20250727015934.png]]
+![nuke-arch-2](/images/2025-07-26/nuke-arch-2.png)
 
 I tried with `yay -S sof-firmware` and rebooting it still does not work.  Well, begin my research on how the firmware is loaded. 
 
 ### The Learning 
-![[Pasted image 20250727021313.png]]
+![nuke-arch-3](/images/2025-07-26/nuke-arch-3.png)
+
 Once start the device, the BIOS loads and executes the MBR boot loader. Once MBR is in the memory, it will executes the GRUB boot loader from hard disk, typically at `/dev/sda` or `/dev/nvme0n1`. Once GRUB starts, it will load the kernel and initramfs image into memory space. Refer this [documentation](https://www.linuxfromscratch.org/blfs/view/svn/postlfs/initramfs.html) to learn more about initramfs, but I try my best to explain along with Claudia.
 
 **Phase 1: Initramfs stage**
@@ -60,14 +61,14 @@ When hardware drivers initialize, it call the kernel's firmware by loading API u
  kernel: Discard any previous partial load.
 
  userspace:
-                - hotplug: cat appropriate_firmware_image > \
-                                        /sys/class/firmware/xxx/data
+        - hotplug: cat appropriate_firmware_image > \
+                            /sys/class/firmware/xxx/data
 
  kernel: grows a buffer in PAGE_SIZE increments to hold the image as it
          comes in.
 
  userspace:
-                - hotplug: echo 0 > /sys/class/firmware/xxx/loading
+        - hotplug: echo 0 > /sys/class/firmware/xxx/loading
 
  kernel: request_firmware() returns and the driver has the firmware
          image in fw_entry->{data,size}. If something went wrong
@@ -100,7 +101,7 @@ Linux uses different mechanism to load firmware based on hardware device. Here a
 - Fallback Mechanisms: Check for firmware on the filesystem, load from there if found. If kernel is configured for it  use a sysfs "fallback": create /sys/firmware/\<xxx>/loading, wait for some program to write firmware to it
 
 Now, the question is why didn't `sof-firmware` not able to load into the kernel. Looking at [SOF documentation](https://thesofproject.github.io/latest/architectures/host/linux_driver/architecture/sof_driver_arch.html#sof-platform-driver), especially at the **Firmware Loading and Booting** part:
-![[Pasted image 20250727030239.png]]
+![nuke-arch-4](/images/2025-07-26/nuke-arch-4.png)
 
 The key issue is the timing of `sof-firmware` availability. As SOF platform drivers loads very early in the boot process during kernel initialization. Even though I did installed after, the firmware files went to `/lib/firmware/` but not included in the **initramfs** which is the earlier boot filesystem. To recap overall process, here it how:
 ```
@@ -114,7 +115,7 @@ The key issue is the timing of `sof-firmware` availability. As SOF platform driv
 
 ### The Lesson
 - Always RTFM :) 
-![[Pasted image 20250727032409.png]]
+![nuke-arch-5](/images/2025-07-26/nuke-arch-5.png)
 - Run `mkinitcpio` after installing firmware packages WHEN installing arch 
 
 And there is also my first time, totally forgot to allocate additional space for swap memory. 
