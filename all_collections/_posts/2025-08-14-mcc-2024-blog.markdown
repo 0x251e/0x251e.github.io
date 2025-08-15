@@ -15,19 +15,19 @@ The init phase, it all started by registering my interested for MCC2024 at [MCC 
 
 Wooo Hoooo LETS GOO MCC !!!
 
-## 0x01 Booting Up: Day 1 
+## 0x01 Booting Up:Day 1 
 
 
 
-## 0x02 OPS RE: Day 2 
+## 0x02 OPS RE:Day 2 
 
 
 
-## 0x03 Web Exploits: Day 3
+## 0x03 Web Exploits:Day 3
 
 
 
-## 0x04 Exfiltration & Impact Phase: Day 4 
+## 0x04 Exfiltration & Impact Phase:Day 4 
 
 
 
