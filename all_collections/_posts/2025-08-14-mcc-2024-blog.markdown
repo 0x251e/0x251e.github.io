@@ -20,13 +20,13 @@ Wooo Hoooo LETS GOO MCC2024 !!!
 
 ## 0x01 Booting Up:Day1 
 
-![day1_01](day1_01.png)
+![day1_01](/images/2025-08-14/day1_01.png)
 
 So the day 1, beginning with a guest speaker Ain gave a talk about her career journey in cybersecurity. She shares her early struggles and motivation that made her never stops evolving. It sets the tone for the camp where we are still young and have the time and effort to adapt, learn and keep striving hard in our future cybersecurity careers. After that, we continue with CompTIA sharing session, which packed with insights on certifications, how it able to assist in career progression in order to stay relevant in the cybersecurity field. The day shifted gears with team-based incebreaks to get everyone talking in morse code...jk...we speak like normal human. Finally at night which is Lockpicking Night where we got ours hands dirty (for my case sweaty) with breaking locks. 
 
-![day1_02](day1_02.png)
+![day1_02](/images/2025-08-14/day1_02.png)
 
-![day1_03](day1_03.png)
+![day1_03](/images/2025-08-14/day1_03.png)
 
 ## 0x02 OPS RE:Day2 
 
