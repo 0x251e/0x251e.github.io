@@ -17,13 +17,14 @@ Wooo Hoooo LETS GOO MCC !!!
 
 ## 0x01 Booting Up:Day1 
 
-
+So the day 1, beginning with a guest speaker Ain gave a talk about her career journey in cybersecurity. She shares her early struggles and motivation that made her never stops evolving. It sets the tone for the camp where we are still young and have the time and effort to adapt, learn and keep striving hard in our future cybersecurity careers. After that, we continue with CompTIA sharing session, which packed with insights on certifications, how it able to assist in career progression in order to stay relevant in the cybersecurity field. The day shifted gears with team-based incebreaks to get everyone talking in morse code...jk...we speak like normal human. Finally at night which is Lockpicking Night where we got ours hands dirty (for my case sweaty) with breaking locks. MVP of the night goes to Foxy, she manage to pick locks without breaking a sweat. This session is a playful reminder that security threats are not just in code, physical security as well.
 
 ## 0x02 OPS RE:Day2 
 
-
+For day 2, I chose the Reverse Engineering session which led by Sir Azlan. The session began with learning how to create a crackme using C in Windows. After that, we disassembled the binary using IDA, demostrating how to read assembly and using x32dbg to debug it. It was a solid blend of theory and practice, and the kind of workshop where you leave with both new tools and new mental models for approaching binaries. For the materials used during RE session is available at [Github](https://github.com/rehackxyz/MCC/tree/main/MCC2024/RE%20-%20Azlan) and I also manage to create some crackme during the session, also at [Github](https://github.com/shreethaar/MCC2024-Challs/tree/main/Reverse-Engineering-Workshop). During the night, we were given a boot2root challenge in which we need to work as a team and get the flag. Learn a lot about port knocking and CUPS vulnerability, and my teammates are: Harraz, Syamil, Lee Jia Poh and Naomi. Feel free to read the writeup at [here](https://github.com/shreethaar/MCC2024-Challs/blob/main/Box-Challenge/Writeup%20for%20Box%20Challenge%20from%20Group%20El-Machete.md)
 
 ## 0x03 Web Exploits:Day3
+
 
 
 
