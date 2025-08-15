@@ -30,19 +30,33 @@ So the day 1, beginning with a guest speaker Ain gave a talk about her career jo
 
 ## 0x02 OPS RE:Day2 
 
+![day02_01](/images/2025-08-14/day02_01.png)
+
 For day 2, I chose the Reverse Engineering session which led by Azlan. The session began with learning how to create a crackme using C in Windows. After that, we disassembled the binary using IDA, demostrating how to read assembly and using x32dbg to debug it. It was a solid blend of theory and practice, and the kind of workshop where you leave with both new tools and new mental models for approaching binaries. For the materials used during RE session is available at [Github](https://github.com/rehackxyz/MCC/tree/main/MCC2024/RE%20-%20Azlan) and I also manage to create some crackme during the session, also at [Github](https://github.com/shreethaar/MCC2024-Challs/tree/main/Reverse-Engineering-Workshop). 
 
+![day02_02](/images/2025-08-14/day02_02.png)
+
 After RE session, we got a pair of sponsor sessions that added serious cred to our learning process. Nexagate walked us through how operate and serviing 400+ clients in Southeast Asia region providing SOC operation. Meanwhile, Velum Labs also share some insights of unseen attack vectors, simulate adversaries which help clients to anticipate threats. 
+
+![day02_03](/images/2025-08-14/day02_03.png)
 
 During the night, we were given a boot2root challenge in which we need to work as a team and get the flag. Learn a lot about port knocking and CUPS vulnerability, and my teammates are: Harraz, Syamil, Lee Jia Poh and Naomi. Feel free to read the writeup at [here](https://github.com/shreethaar/MCC2024-Challs/blob/main/Box-Challenge/Writeup%20for%20Box%20Challenge%20from%20Group%20El-Machete.md)
 
 ## 0x03 Web Exploits:Day3
 
+![day03_01](/images/2025-08-14/day03_01.png)
+
 Next day, we started off with Web Application Vulnerability Research by Ramadhan. We learn about PHP and Laravel, Rempah walk us through logic flows and misconfigurations in web applications. After that, guests that afternoon included representatives from Akati Sekurity, led by experienced folks behind one of Malaysia’s foremost cybersecurity firms. Founded in 2007, the company delivers managed security services, consulting, incident response, and governance across five continents. They bring strategy, intelligence, and resilience. Next was Google Cloud Security session which convered cloud incident handling and how VirusTotal is utilize as a tool for their threat intelligence operation. 
 
 The evening cooled down with a BBQ dinner and some social engineering...i mean social activity, conversing and sharing stories. 
 
+![day03_02](/images/2025-08-14/day03_02.png)
+
+![day03_03](/images/2025-08-14/day03_03.png)
+
 ## 0x04 Exfiltration & Impact Phase:Day4 
+
+![day04](/images/2025-08-14/day04.png)
 
 Now the final day, took group photos and in terms of MITRE ATT&CK terms, this was the exfiltration and packing up valuable intel we gathered through the course of 4 days. What we gathered ? skills, knowledge, wisdows, connections, friendship. By noon, MCC2024 network went offline as everyone checked out and headed their separate ways. 
 
