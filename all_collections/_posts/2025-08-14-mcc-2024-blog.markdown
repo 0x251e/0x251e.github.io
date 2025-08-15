@@ -1,0 +1,34 @@
+---
+layout: post
+title: MCC 2024 Blog 
+date: 2025-08-14
+categories: camp
+---
+
+# MCC2024 
+MCC (Malaysia Cybersecurity Camp) 2024 with the theme of "Step Up" was a four days cybersecurity camp that held at Pacific Regency Beach Resort in Port Dickson. The camp starts from 29th November to 2nd December. It brought together passionate students, cybersecurity practitioners and tinkers for a full intensive and practical sessions facilitated by industry professionals, guest speakers and skilled trainers. In keeping with the theme of "Step Up", the camp's main focus is to level up through lab sessions, web-app vulnerability research, RE exercises and alot of yapping and banter sessions, which gave alot insightful industry experiences and not just knowledge, also the wisdom.  
+
+## 0x00 Recon & Entrypoint 
+The init phase, it all started by registering my interested for MCC2024 at [MCC website](https://cybercamp.my/mcc2024-step-up/). After a few months, I made it onto the shortlist and was giving a next challenge which is to solve CTF challenges and submit a writeup. The last stage was an interview session with MCC agents, a quick but focused conversation about my background and what made me to be interested to join MCC. A month later, I received this email: 
+
+![email](/images/2025-08-14/email.png)
+
+Wooo Hoooo LETS GOO MCC !!!
+
+## 0x01 Booting Up: Day 1 
+
+
+
+## 0x02 OPS RE: Day 2 
+
+
+
+## 0x03 Web Exploits: Day 3
+
+
+
+## 0x04 Exfiltration & Impact Phase: Day 4 
+
+
+
+## Post-Op Debrief 
