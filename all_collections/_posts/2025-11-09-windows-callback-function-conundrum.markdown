@@ -131,7 +131,7 @@ The danger arises when attacker can influence or overwrite that function pointer
 
 ##### How does the vulnerability occurs and works under the hood 
 
-This research came out when I played a reserve engineering challenge created by [Fareed Fauzi](https://www.youtube.com/watch?v=0RV7wyB3Mb0) and after it ended, I had a discussion with him and talked about my findings where the challenge uses `EnumDesktopA` to execute the shellcode. Here is my writeup for that [challenge](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/). 
+This research came out when I played a reserve engineering challenge created by [Fareed Fauzi](https://fareedfauzi.github.io/) and after it ended, I had a discussion with him and talked about my findings where the challenge uses `EnumDesktopA` to execute the shellcode. Here is my writeup for that [challenge](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/). 
 
 Now let's take an easy example of Windows API function, [`CopyFileExA`](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-copyfileexa) function. The function will copy an existing file to a new file. Here is the function parameter syntax in C++:
 ```c++
