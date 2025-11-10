@@ -2,7 +2,7 @@
 layout: post
 title: "Windows Callback Function Conundrum"
 date: 2025-11-09
-categories: [reverse engineer]
+categories: [reverse engineering]
 ---
 
 ![callback-1.png](/images/2025-11-09/callback-1.png)
@@ -23,7 +23,7 @@ In much more simpler terms, a callback function is a function where programmer w
 LRESULT CALLBACK WindowProc(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam);
 ```
 
-The keyword of CALLBACK defines how functions is called internally by Windows. Referring to the [Old New Thing](https://devblogs.microsoft.com/oldnewthing/20040108-00/?p=41163)by Raymond Chen, the CALLBACK is actually a macro that expands to `__stdcall`, which specifies the calling convention used by Win32 API. 
+The keyword of CALLBACK defines how functions is called internally by Windows. Referring to the [Old New Thing](https://devblogs.microsoft.com/oldnewthing/20040108-00/?p=41163) by Raymond Chen, the CALLBACK is actually a macro that expands to `__stdcall`, which specifies the calling convention used by Win32 API. 
 
 Here is a simple C code which showcase the utilization of **WindowProc()** to execute a GUI application with text. 
 
@@ -106,7 +106,7 @@ Next when reached `CreateWindowsExA`, we can notice how the arguments are passed
 
 After `CreateWindowsExA`, there is a message loop that calls `GetMessageA`, `TranslateMessage` and `DispatchMessageA`. This loop function lookups the `WindowProc` for the windows and calls it and then transfer control into Windows. 
 
-![gif](file:///home/trevorphilips/Downloads/05.11.2025_23.04.44_REC%20(online-video-cutter.com).gif)
+![gif](/images/2025-11-09/callback-1.gif)
 
 Checking back with IDA, yes there is the loop function where `WindowProc` is passed and the handler is the one will be referred by `WindowProc` and later will print out the string "Hello, Windows!"
 
@@ -226,7 +226,7 @@ int main(void) {
 ```
 
 Here it how it works when executed:
-![gif](file:///home/trevorphilips/Downloads/09.11.2025_18.32.52_REC.gif)
+![gif](/images/2025-11-09/callback-2.gif)
 
 Using x32dbg to debug it, we notice the shellcode execute at here:
 
@@ -242,11 +242,11 @@ However this exploration is not well executed as pre-plan because:
 - only utilizing `LPPROGRESS_ROUTINE` as a function pointer itself to execute shellcode rather than creating a separate function for `CopyProgressRoutine`.  
 
 ##### References:
-1. https://learn.microsoft.com/en-us/windows/win32/api/winuser/nc-winuser-wndproc
-2. https://stackoverflow.com/questions/11066202/what-does-callback-in-a-windows-api-function-declaration-mean
-3. https://unit42.paloaltonetworks.com/win32k-analysis-part-1/#post-128455-_mn6uzitnlpua
-4. https://www.bordergate.co.uk/callback-shellcode-execution/
-5. https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/
-6. https://cocomelonc.github.io/tutorial/2022/06/27/malware-injection-20.html
-7. https://github.com/aahmad097/AlternativeShellcodeExec 
+1. [https://learn.microsoft.com/en-us/windows/win32/api/winuser/nc-winuser-wndproc](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nc-winuser-wndproc)
+2. [https://stackoverflow.com/questions/11066202/what-does-callback-in-a-windows-api-function-declaration-mean](https://stackoverflow.com/questions/11066202/what-does-callback-in-a-windows-api-function-declaration-mean)
+3. [https://unit42.paloaltonetworks.com/win32k-analysis-part-1/#post-128455-_mn6uzitnlpua](https://unit42.paloaltonetworks.com/win32k-analysis-part-1/#post-128455-_mn6uzitnlpua)
+4. [https://www.bordergate.co.uk/callback-shellcode-execution/](https://www.bordergate.co.uk/callback-shellcode-execution/)
+5. [https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/)
+6. [https://cocomelonc.github.io/tutorial/2022/06/27/malware-injection-20.html](https://cocomelonc.github.io/tutorial/2022/06/27/malware-injection-20.html)
+7. [https://github.com/aahmad097/AlternativeShellcodeExec](https://github.com/aahmad097/AlternativeShellcodeExec) 
 
