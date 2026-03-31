@@ -63,4 +63,8 @@ On the last day, we did presentation on the group assignments and with closing c
 
 ![gcc05](/images/2026-03-17/gcc05.jpg)
 
+### Final Thoughts
+
+Reflecting on the entire journey, I am incredibly grateful to SherpaSec for their sponsorship and to the organizers for making GCC 2026 Vietnam an unforgettable experience of growth and connection. A week long of technical dive into kernel internals, cloud attack chains, and agentic AI, the true value of the camp was the opportunity to collaborate with 50 of the brightest young security talents from across Asia and Romania. Whether it was building a hypervisor from scratch or working through the Quokka-sponsored mobile security assignment, the hands-on learning provided a real-world perspective that few other programs can match. For those looking to challenge themselves and represent their country on the global stage next year, I highly recommend staying tuned to SherpaSec’s social media updates for the next application cycle. This camp is more than just a training session; it is a launchpad into the global cybersecurity community.
+
 
