@@ -1,17 +1,15 @@
 --- 
 layout: post
-title: GCC 2026 Blog
+title: GCC 2026 Vietnam Blog
 date: 2026-03-17
 categories: camp
 --- 
 
-# GCC 2026 Vietnam 
+For one week in March 2026, I had the privilege of attending the [Global Cybersecurity Camp (GCC) 2026](https://gcc.ac/), held in Ho Chi Minh City, Vietnam. GCC is an annual, week-long international cybersecurity camp that brings together approximately 50 of the top young security talents from countries such as Japan, Singapore, Taiwan, Thailand, Vietnam, Malaysia, Indonesia, India, and Romania. The camp offers hands-on training led by industry professionals and researchers from around the world.
 
-For one week in March 2026, I had the privilege of attending the Global Cybersecurity Camp (GCC) 2026, held in Ho Chi Minh City, Vietnam. GCC is an annual, week-long international cybersecurity camp that brings together approximately 50 of the top young security talents from countries such as Japan, Singapore, Taiwan, Thailand, Vietnam, Malaysia, Indonesia, India, and Romania. The camp offers hands-on training led by industry professionals and researchers from around the world.
+The application process for GCC is highly competitive, involving a rigorous screening that evaluates both technical background and community involvement, followed by an interview with a panel from [SherpaSec](http://sherpasec.org/).
 
-The application process for GCC is highly competitive, involving a rigorous screening that evaluates both technical background and community involvement, followed by an interview with a panel from SherpaSec.
-
-I am honored and grateful to have been selected as one of four students representing Malaysia, alongside Chai Cheng Xun, Ruhan, and Han Ming. I would also like to express my appreciation to SherpaSec for their sponsorship, as well as Ryan and Chang Shiau Heui for their support in managing logistics.
+I am honored and grateful to have been selected as one of four students representing Malaysia, alongside [Chai Cheng Xun](https://www.linkedin.com/in/chai-cheng-xun/), [Ruhan](https://www.linkedin.com/in/ruhan-aidan-amaradasa-104113155/), and [Han Ming](https://www.linkedin.com/in/hmleong0510/). I would also like to express my appreciation to SherpaSec for their sponsorship, as well as [Ryan](https://www.linkedin.com/in/ryanyap555/) and [Chang Shiau Heui](https://www.linkedin.com/in/chang-shiau-huei/) for their support in managing logistics.
 
 Throughout the week, we participated in technical lectures, hands-on workshops, and group projects. We also had the opportunity to connect with talented and like-minded participants from different countries, exchanging cultures and learning from one another. This made the camp not only immersive, but also a meaningful journey of growth and connection.
 
