@@ -53,7 +53,7 @@ In the afternoon, Kar Wei Loh introduced Agentic AI for Offensive Security. This
 
 ### Day 6
 
-![gcc02](gcc02.jpeg)
+![gcc02](/images/2026-03-17/gcc02.jpeg)
 
 On the last day, we did presentation on the group assignments and with closing ceremory of prizes. I was one of the 6 students to received an award for Top Student. The prize was CREST CPSA exam voucher. After the closing ceremony, I did not join the city tour because I did not have enough sleep and went back to hotel and take a nap. Later at night, I join the closing party and had dinner. 
 
