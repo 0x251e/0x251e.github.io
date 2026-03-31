@@ -11,7 +11,7 @@ For one week in March 2026, I had the privilege of attending the [Global Cyberse
 
 The application process for GCC is highly competitive, involving a rigorous screening that evaluates both technical background and community involvement, followed by an interview with a panel from [SherpaSec](http://sherpasec.org/).
 
-I am honored and grateful to have been selected as one of four students representing Malaysia, alongside [Chai Cheng Xun](https://www.linkedin.com/in/chai-cheng-xun/), [Ruhan](https://www.linkedin.com/in/ruhan-aidan-amaradasa-104113155/), and [Han Ming](https://www.linkedin.com/in/hmleong0510/). I would also like to express my appreciation to SherpaSec for their sponsorship, as well as [Ryan](https://www.linkedin.com/in/ryanyap555/) and [Chang Shiau Heui](https://www.linkedin.com/in/chang-shiau-huei/) for their support in managing logistics.
+I am honored and grateful to have been selected as one of four students representing Malaysia, alongside [Chai Cheng Xun](https://www.linkedin.com/in/chai-cheng-xun/), [Ruhan](https://www.linkedin.com/in/ruhan-aidan-amaradasa-104113155/), and [Han Ming](https://www.linkedin.com/in/hmleong0510/). I would also like to express my appreciation to SherpaSec for their sponsorship, as well as [Ryan](https://www.linkedin.com/in/ryanyap555/) and [Chang Shiau Heui](https://www.linkedin.com/in/chang-shiau-huei/) for their support in managing logistics. Finally, I would like to thanks companies that sponsored our participants, which are CyberWise, Stratos Security and SecIron. 
 
 Throughout the week, we participated in technical lectures, hands-on workshops, and group projects. We also had the opportunity to connect with talented and like-minded participants from different countries, exchanging cultures and learning from one another. This made the camp not only immersive, but also a meaningful journey of growth and connection.
 
@@ -59,6 +59,8 @@ In the afternoon, [Kar Wei Loh](https://www.linkedin.com/in/kar-wei-loh/) introd
 
 On the last day, we did presentation on the group assignments and with closing ceremory of prizes. I was one of the 6 students to received an award for Top Student. The prize was CREST CPSA exam voucher. After the closing ceremony, I did not join the city tour because I did not have enough sleep and went back to hotel and take a nap. Later at night, I join the closing party and had dinner.
 
-![gcc04](/images/2026-03-17/gcc04.jpeg)
+![gcc04](/images/2026-03-17/gcc04.jpg)
 
-### 
+![gcc05](/images/2026-03-17/gcc05.jpg)
+
+
