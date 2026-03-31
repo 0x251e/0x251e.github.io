@@ -26,7 +26,7 @@ After the lunch, we proceed back to the hotel and check in and meet my Japanese 
 
 The first day of the camp kicked off with ethics tranining session conducted by Thanh Nguyen and Thinh Hoang from VNSEC foundation. This session teaches the ethical responsibilities that come with offensive security skills when comes to handling criticial vulnerabilities under real-world pressure. Understanding how governance and laws plays a part in offensive security along with looking at case studies and firsthand disclosure experience. 
 
-![gcc03]((/images/2026-03-17/gcc03.jpg)
+![gcc03](/images/2026-03-17/gcc03.jpg)
 
 Next session was about group assignments which is sponsored by Quokka and it has to completed throughout the week. The assignment was designed to foster cross-border collaboration and was split into two core tasks. First, we conducted a deep-dive analysis of mobile apps to identify security vulnerabilities. Second, we developed an automated tool to detect potentially malicious applications. We were evaluated on detection effectiveness, automation reliability, and the quality of our final presentation. To support our research, we were granted access to the Quokka Q-MAST platform, which provided the necessary APIs for our technical implementation. 
 
