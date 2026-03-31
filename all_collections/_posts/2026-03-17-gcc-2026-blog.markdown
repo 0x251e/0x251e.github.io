@@ -5,6 +5,8 @@ date: 2026-03-17
 categories: camp
 --- 
 
+![gcc01](/images/2026-03-17/gcc01.png)
+
 For one week in March 2026, I had the privilege of attending the [Global Cybersecurity Camp (GCC) 2026](https://gcc.ac/), held in Ho Chi Minh City, Vietnam. GCC is an annual, week-long international cybersecurity camp that brings together approximately 50 of the top young security talents from countries such as Japan, Singapore, Taiwan, Thailand, Vietnam, Malaysia, Indonesia, India, and Romania. The camp offers hands-on training led by industry professionals and researchers from around the world.
 
 The application process for GCC is highly competitive, involving a rigorous screening that evaluates both technical background and community involvement, followed by an interview with a panel from [SherpaSec](http://sherpasec.org/).
