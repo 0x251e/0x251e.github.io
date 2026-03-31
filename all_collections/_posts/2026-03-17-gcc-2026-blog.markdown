@@ -49,7 +49,11 @@ We also dissected the "three walls" of EDR self-protection: real-time scanning v
 
 ### Day 5 
 
+![gcc07](/images/2026-03-17/gcc07.jpg)
+
 The first session focused on Entra ID Attack Chains with Jimmy Su and John Jiang. We explored the "Entra Joined" device architecture, learning that approximately 90% of Fortune 500 companies now rely on this cloud-native identity system. The core of our learning was the Primary Refresh Token (PRT), which acts as the "Golden Ticket" for cloud SSO. We practiced extracting PRTs and session keys from LSASS memory on non-TPM machines and learned how to use roadtx to replay these tokens in an attacker’s browser, effectively bypassing MFA. We also simulated lateral movement using "Pass-the-Cert" and established persistence by injecting backdoors into Service Principals.
+
+![gcc06](/images/2026-03-17/gcc06.jpeg)
 
 In the afternoon, [Kar Wei Loh](https://www.linkedin.com/in/kar-wei-loh/) introduced Agentic AI for Offensive Security. This was a forward-looking session on transforming LLMs from chatbots into autonomous pentesting agents. We utilized the Model Context Protocol (MCP) to securely connect AI agents to external tools, allowing them to autonomously run Nmap scans and parse CVE data. We learned to build "agentic workflows" where the AI reflects on its findings and iteratively fixes exploit scripts—such as resolving syntax errors or version mismatches—before execution. This session highlighted that the future of pentesting lies in programmatic, autonomous loops that can scale offensive operations far beyond manual capabilities.
 
