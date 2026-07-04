@@ -12,6 +12,7 @@ Recently while monitoring EDR alerts, I came across a detection alert raised fro
 
 ![ps2exe-2.png](/images/2026-07-04/ps2exe-2.png)
 
+
 So it appears to be a [PS2EXE](https://github.com/MScholtes/PS2EXE) powershell module was used to compile a Powershell script into executables. Well PSEXE is kind enough to reverse engineer for making things easy to convert the executable back to powershell script just by supplying an extra argument into the command
 ```powershell
 redacted.exe -extract:redacted.ps1
