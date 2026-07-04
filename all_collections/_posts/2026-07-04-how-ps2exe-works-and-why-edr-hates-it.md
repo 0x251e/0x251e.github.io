@@ -1,3 +1,10 @@
+--- 
+layout: post
+title: How PS2EXE Works and Why EDR Hates It
+date: 2026-07-04
+categories: reverse engineering
+--- 
+
 ![ps2exe-1.png](./images/2026-07-04/ps2exe-1.png)
 
 ### The Backstory
